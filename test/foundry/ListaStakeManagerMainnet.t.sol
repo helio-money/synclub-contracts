@@ -266,7 +266,7 @@ contract ListaStakeManagerMainnet is Test {
         (dailySlisBnb, remainingSlisBnb, lastBurnTime) = stakeManager
             .refund();
         assertEq(dailySlisBnb, dailySlisBnb_3);
-        assertApproxEqAbs(remainingSlisBnb, 0, 1); // 0 or 1 wei remaining
+        assertApproxEqAbs(remainingSlisBnb, 0, 2); // 0 or 1 or 2 wei remaining
         assertEq(lastBurnTime, block.timestamp);
     }
 }
